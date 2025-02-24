@@ -1,0 +1,38 @@
+{
+  "id": 1,
+  "title": "Custom nike sneakers, white unisex sneakers. Alien art, sneakers nike air force 1",
+  "description": "Discover your inner world as a street artist in our custom-made Nike Air Force sneakers with vibrant graffiti patterns.  These sneakers are not just shoes, they are a bold expression of individuality and creativity. Talented artists carefully paint each pair by hand, so no two pairs are exactly the same. The graffiti style gives the classic Nike Air Force design an urban touch, turning these sneakers into a real work of art that reflects the essence of street culture.",
+  "price": 240,
+  "oldPrice": 365.50,
+  "discount": 32,
+  "rating": 4.7,
+  "reviews": 40,
+  "tags": ["32% off", "Free delivery", "Handmade", "Digital"],
+  "productDescription": [
+    {
+      "id": "1",
+      "title": "Size",
+      "description": "Description"
+    },
+    {
+      "id": "11",
+      "title": "Color",
+      "description": "Description"
+    },
+    {
+      "id": "2",
+      "title": "Personalization",
+      "description": "Description"
+    }
+  ],
+  "images": [
+    "/images/image-1.png"
+  ],
+  "sizes": ["39", "40", "41", "42", "43", "44"],
+  "colors": ["White", "Black", "Red"],
+  "personalization": true,
+  "seller": {
+    "name": "olganikeart",
+    "profileUrl": "/seller/olganikeart"
+  }
+}
