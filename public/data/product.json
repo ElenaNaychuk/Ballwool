@@ -26,7 +26,7 @@
     }
   ],
   "images": [
-    "/images/image-1.png"
+    "/shared/assets/icons/image-1.png"
   ],
   "sizes": ["39", "40", "41", "42", "43", "44"],
   "colors": ["White", "Black", "Red"],

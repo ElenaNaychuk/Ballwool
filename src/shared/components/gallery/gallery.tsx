@@ -5,8 +5,7 @@ import { ProductItemDto } from "src/entities/product/model/types";
 import { Button } from "@shared/components/button/Button";
 import { LeftArrowIcon } from '@shared/assets/icons/leftArrow';
 import { RightArrowIcon } from "@shared/assets/icons/rightArrow";
-
-
+import image from '@shared/assets/icons/image-1.png'
 
 export const Gallery = ({ product }: { product: ProductItemDto}) => {
   return(
@@ -19,7 +18,7 @@ export const Gallery = ({ product }: { product: ProductItemDto}) => {
             </Button>
           </div>
           <Image 
-            src={product.images[0]} 
+            src={image} 
             alt={product.title} 
             width={807}
             height={300}
