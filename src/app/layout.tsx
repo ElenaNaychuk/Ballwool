@@ -6,7 +6,6 @@ export const metadata = {
   description: 'Buy custom-made Nike Air Force sneakers with vibrant graffiti...',
   openGraph: {
     title: "Custom Nike Sneakers",
-    images: ["/data/image1.jpg"]
   }
 };
  

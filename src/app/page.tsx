@@ -1,9 +1,9 @@
 import { Metadata } from 'next';
-import { Suspense } from 'react';
-import { Loader } from '@shared/components';
+
 import { ProductContent } from '@shared/components';
-import { getProduct } from 'src/entities/product';
 import { Sidebar } from '@shared/components/sidebar/sidebar';
+import { getProduct } from 'src/entities/product';
+import { ErrorPage } from '@shared/components/errorPage/errorPage';
 
 export const metadata: Metadata = {
   title: 'Custom Nike Sneakers – Shop Now',
@@ -11,16 +11,19 @@ export const metadata: Metadata = {
 };
 
 export default async function ProductPage() {
-  const productPromise = getProduct();
+
+  const product = await getProduct();
+
+  if(!product) {
+    return <ErrorPage />
+  }
 
   return (
     <div className="container mx-auto">
-      <Suspense fallback={<Loader />}>
         <div className="flex pap-4">
-          <Sidebar />
-          <ProductContent productPromise={productPromise} />        
+            <Sidebar />
+            <ProductContent product={product}/>     
         </div>
-      </Suspense>
     </div>
   );
 }

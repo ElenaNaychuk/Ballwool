@@ -10,17 +10,8 @@
 
 @font-face {
   font-family: 'Metropolis';
-  src: url('/fonts/Metropolis-Regular.otf') format('woff2'),
-       url('/fonts/Metropolis-Regular.otf') format('woff');
+  src: url('/Ballwool/fonts/Metropolis-Regular.woff2') format('woff2');
   font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Metropolis';
-  src: url('/fonts/Metropolis-Bold.otf') format('woff2'),
-       url('/fonts/Metropolis-Bold.otf') format('woff');
-  font-weight: 700;
   font-style: normal;
 }
 

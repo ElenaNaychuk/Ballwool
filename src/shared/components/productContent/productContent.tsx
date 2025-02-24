@@ -1,3 +1,5 @@
+'use client'
+
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -9,7 +11,7 @@ import { Accordion } from "@shared/components/accordion/accordion";
 import { Divider } from "@shared/components/divider/divider";
 import { Button } from "@shared/components/button/Button";
 import { Gallery } from "@shared/components/gallery/gallery";
-import { ErrorPage } from "@shared/components/errorPage/errorPage";
+
 
 import { tagsMap } from '@shared/lib/tagsMap';
 
@@ -19,14 +21,8 @@ import RectangleIcon from "@shared/assets/icons/Rectangle 62.png";
 import { ProductItemDto } from "src/entities/product/model/types";
 import { accordionInfoData } from "src/entities/product/api/__mock__/accordionInfoData";
 
-
-export async function ProductContent({ productPromise }: { productPromise: Promise<ProductItemDto> }) {
-  const product = await productPromise;
-
-  if(!product) {
-    return <ErrorPage />
-  }
-
+export function ProductContent({ product }: { product: ProductItemDto}) {
+ 
   return (
     <div className="flex gap-4">
     {/* Галерея слева */}
@@ -40,7 +36,7 @@ export async function ProductContent({ productPromise }: { productPromise: Promi
 
           <div className="flex flex-col gap-6">
             <div className="flex flex-col gap-2">
-              <h1>{product.title}</h1>
+              <h1>{product?.title}</h1>
               <Rating rating={product.rating} reviews={product.reviews} />
             </div>
           </div>
