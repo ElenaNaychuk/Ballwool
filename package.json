@@ -7,7 +7,7 @@
     "dev": "next dev --turbopack",
     "predeploy": "npm run build",
     "build": "next build && next export",
-    "deploy": "npm build && gh-pages -d out",
+    "deploy": "gh-pages -d out",
     "start": "next start",
     "lint": "next lint"
   },

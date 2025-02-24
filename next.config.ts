@@ -1,8 +1,10 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  output: 'export',
+module.exports = {
   basePath: '/Ballwool',
-  trailingSlash: true,
+  assetPrefix: '/Ballwool/',
+  reactStrictMode: true,
+  output: 'export',
+  images: {
+    unoptimized: true,
+  },
 };
 
-export default nextConfig;
