@@ -62,7 +62,7 @@ export const Rating: FC<RatingProps> = ({ rating, reviews }) => {
       ))}
 
         <div>
-          <span className="ml-2 text-sm font-semibold text-text-title">{rating}</span>
+          <span className="ml-2 text-sm font-semibold text-text-base">{rating}</span>
           <span className="ml-2 text-sm text-[#9EA0AB]">{`(${reviews} reviews)`}</span>
         </div>
       </div>

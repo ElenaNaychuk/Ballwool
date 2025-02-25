@@ -8,7 +8,7 @@ type TagProps = {
 
 export const Tag: FC<TagProps> = ({ icon, text}) => {
   return (
-    <div className='flex gap-1 items-center bg-[#EDEEF2] p-1'>
+    <div className='flex gap-1 items-center bg-[#EDEEF2] px-2 py-1 text-text-base text-small'>
       {icon}
       {text}
     </div>

@@ -35,7 +35,7 @@ export const Gallery = ({ product }: { product: ProductItemDto}) => {
       {product.images.map(image => (
           <div
             key={image}
-            className="h-[4px] bg-text-title w-[120px]"
+            className="h-[4px] bg-text-base w-[120px]"
           />
         ))}
     </div>

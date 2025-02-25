@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import React from 'react';
 
   const breadcrumbData = [
     { path: '/', label: 'Home' },
@@ -11,14 +12,16 @@ import Link from 'next/link';
 export const Breadcrumbs = () => {
 
   return (
-    <nav aria-label="Breadcrumb" className="flex gap-1">
+    <nav aria-label="Breadcrumb" className="flex gap-2 items-center h-6">
       {breadcrumbData.map((crumb, index) => (
-        <span key={index} className="text-text-light">
-          {index > 0 && ' / '}
-          <Link href={crumb.path} className={index === breadcrumbData.length - 1 ? 'text-text-dark': 'text-text-light'}>
-            {crumb.label}
-          </Link>
-        </span>
+        <React.Fragment key={index}>
+          <span className="text-small text-text-light">{index > 0 && '/'}</span>
+          <span className="text-small text-text-light">
+            <Link href={crumb.path} className={index === breadcrumbData.length - 1 ? 'text-text-dark': 'text-text-light'}>
+              {crumb.label}
+            </Link>
+          </span>
+        </React.Fragment>
       ))}
     </nav>
   )
