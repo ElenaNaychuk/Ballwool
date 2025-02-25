@@ -15,7 +15,9 @@ export const Breadcrumbs = () => {
     <nav aria-label="Breadcrumb" className="flex gap-2 items-center h-6">
       {breadcrumbData.map((crumb, index) => (
         <React.Fragment key={index}>
-          <span className="text-small text-text-light">{index > 0 && '/'}</span>
+          {index > 0
+          ? <span className="text-small text-text-light">/</span>
+          :null}
           <span className="text-small text-text-light">
             <Link href={crumb.path} className={index === breadcrumbData.length - 1 ? 'text-text-dark': 'text-text-light'}>
               {crumb.label}
